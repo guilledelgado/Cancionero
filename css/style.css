@@ -1,0 +1,16 @@
+body{
+    background-color:#121212;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+h1{
+    color:#b5a98a;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 72px;
+}
+h2{
+    color:#b5a98a;
+    font-famuly: 'Courier New', Courier, monospace;
+    font-size: 50px;
+}
