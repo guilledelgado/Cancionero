@@ -14,3 +14,12 @@ h2{
     font-family: 'Courier New', Courier, monospace;
     font-size: 50px;
 }
+header {
+    background-color: #b5a98a;
+    height: 70px;
+    width: 100%;
+}
+header .logo img {
+    width: 150px;
+    height: auto;
+}
