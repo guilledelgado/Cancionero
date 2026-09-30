@@ -69,3 +69,94 @@ body .logoppal img {
     height: auto;
     border-style: none;
 }
+
+.portada {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)),
+        url("../multimedia/soda-stereo-portada.jpg");
+    background-size: cover;
+    background-position: top;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #b5a98a;
+}
+
+.portada-contenido {
+    max-width: 1000px;
+    position: relative;
+    top: 10rem;
+}
+
+.portada-contenido h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.portada-contenido p {
+    font-size: 1.5rem;
+    line-height: 2;
+    text-shadow:
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+
+.canciones {
+    background: #000;
+    color: #fff;
+    padding: 5rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.lista-canciones {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.cancion {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 2rem;
+    background: #141414;
+    border: 5px solid #2a2a2a;
+    border-radius: 60px;
+    color: #b5a98a;
+    text-decoration: none;
+    }
+
+.cancion:hover,
+.cancion:focus-visible {
+    transform: translateY(-6px);
+    background: #534e40;
+    border-color: #fff;
+}
+
+.cancion-titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.cancion-album {
+    font-size: 1rem;
+    color: #aaa;
+}
