@@ -51,10 +51,12 @@ header .logo img {
     height: auto;
     display: block;
 }
+
 .links-navegacion {
     display: flex;
     gap: 20px;
 }
+
 .links-navegacion a {
     color:#121212;
     font-family: 'Courier New', Courier, monospace;
@@ -76,6 +78,7 @@ header .logo img {
     padding: 10px;
     
 }
+
 .bloque-artista img {
     width: auto;
     height: 300px;
