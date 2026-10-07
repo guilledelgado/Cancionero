@@ -1,0 +1,5 @@
+.portada {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)),
+        url("../multimedia/patricio-rey-portada.jpeg");
+}
