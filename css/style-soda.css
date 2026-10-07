@@ -3,3 +3,24 @@
         linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)),
         url("../multimedia/soda-stereo-portada.jpg");
 }
+.navegacion-cancion {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 12px;
+	max-width: 700px;
+	margin: 40px auto;
+	padding: 0 16px;
+}
+
+.navegacion-cancion a {
+	display: inline-block;
+	padding: 10px 20px;
+	border: 2px solid #b5a98a;
+	border-radius: 999px;
+	color: #b5a98a;
+	background: transparent;
+	font-weight: 600;
+	text-decoration: none;
+	}
