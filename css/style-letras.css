@@ -1,0 +1,21 @@
+.segmento{
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: bottom;
+}
+.acorde{
+    color:#faf9f7;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: bold;
+}
+
+.letra{
+    color:#b5a98a;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+.letra-transparente{
+    color: transparent;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
