@@ -1,22 +1,49 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
-    background-color: #121212;
+
+:root {
+    --azul-50:  #EBF3FE;
+    --azul-100: #D3E5FC;
+    --azul-200: #B0D0F9;
+    --azul-300: #85B6F5;
+    --azul-400: #5A9BF0;
+    --azul-500: #3380E8;
+    --azul-600: #2565C4;
+    --azul-700: #1F509D;
+    --azul-800: #1C427D;
+    --azul-900: #152F59;
+    --azul-950: #08121F;
+
+
+    --color-fondo: var(--azul-950);
+    --color-texto: var(--azul-200);
+    --color-header: var(--azul-400);
+    --color-sobre-header: var(--azul-950);
+    --color-tarjeta: var(--azul-900);
+    --color-borde: var(--azul-800);
+    --color-acento: var(--azul-500);
+    --color-hover-header: var(--azul-500);
+    --color-tarjeta-hover: var(--azul-800);
+    --color-texto-suave: var(--azul-400);
+}
+
+body {
+    background-color: var(--color-fondo);
     display: grid;
     justify-items: center;
     align-items: center;
 }
 
-h1{
-    color:#b5a98a;
+h1 {
+    color: var(--color-texto);
     font-family: 'Courier New', Courier, monospace;
     font-size: 72px;
 }
 
-h2{
-    color:#b5a98a;
+h2 {
+    color: var(--color-texto);
     font-family: 'Courier New', Courier, monospace;
     font-size: 24px;
     text-align: left;
@@ -24,16 +51,16 @@ h2{
     margin-bottom: 10px;
 }
 
-h3{
-    color:#b5a98a;
+h3 {
+    color: var(--color-texto);
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-h4{
-    color:#b5a98a;
+h4 {
+    color: var(--color-texto);
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
     text-align: bottom;
@@ -42,15 +69,15 @@ h4{
 }
 
 header {
-    background-color: #b5a98a;
+    background-color: var(--color-header);
     height: 70px;
     width: 100%;
     padding: 10px 24px;
     display: flex;
     align-items: center;
-    flex-wrap:wrap;
-    justify-content:space-around;
-    position: relative; 
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
 }
 
 header .logo img {
@@ -65,6 +92,7 @@ header input[type="search"] {
     font-size: 16px;
     width: 300px;
 }
+
 .links-navegacion {
     gap: 30px;
     border-radius: 20px;
@@ -72,11 +100,11 @@ header input[type="search"] {
 }
 
 .links-navegacion:hover {
-    background-color: #aaa390;
+    background-color: var(--color-hover-header);
 }
 
 .links-navegacion a {
-    color:#121212;
+    color: var(--color-sobre-header);
     font-family: 'Courier New', Courier, monospace;
     text-decoration: none;
     box-sizing: border-box;
@@ -86,8 +114,9 @@ header input[type="search"] {
     text-align: center;
     margin-top: 20px;
 }
+
 .containerArtistas {
-    border-top: 1px solid #b5a98a;
+    border-top: 1px solid var(--color-acento);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -95,21 +124,22 @@ header input[type="search"] {
 
 .bloque-artista {
     display: inline-block;
-    background-color: solid transparent;
+    background-color: transparent;
     border-radius: 12px;
     margin: 10px;
     padding: 20px;
     transition: background-color 0.5s;
 }
 
-.bloque-artista:hover{
-    background-color: #212020;
+.bloque-artista:hover {
+    background-color: var(--color-tarjeta);
 }
 
 .bloque-artista img {
     width: auto;
     height: 300px;
 }
+
 body .logoppal {
     width: 250px;
     height: auto;
@@ -120,6 +150,7 @@ body .logoppal {
     margin-right: auto;
     display: block;
 }
+
 body .logoppal img {
     width: 250px;
     height: auto;
@@ -135,7 +166,7 @@ body .logoppal img {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #b5a98a;
+    color: var(--color-texto);
 }
 
 .portada-contenido {
@@ -153,15 +184,15 @@ body .logoppal img {
     font-size: 1.5rem;
     line-height: 2;
     text-shadow:
-        -1px -1px 0 #000,
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
+        -1px -1px 0 var(--color-fondo),
+        1px -1px 0 var(--color-fondo),
+        -1px 1px 0 var(--color-fondo),
+        1px 1px 0 var(--color-fondo);
 }
 
 .canciones {
-    background: #000;
-    color: #fff;
+    background: var(--color-fondo);
+    color: var(--color-texto);
     padding: 5rem 2rem;
     max-width: 1000px;
     margin: 0 auto;
@@ -184,26 +215,26 @@ body .logoppal img {
 }
 
 .cancion {
-    display:flex;
+    display: flex;
     gap: 14px;
     height: 100%;
     padding: 18px 20px;
     width: 950px;
     max-width: 100%;
     margin: 0 auto;
-    background: #141414;
-    border: 5px solid #2a2a2a;
-    color: #b5a98a;
+    background: 	var(--color-tarjeta);
+    border: 5px solid var(--color-borde);
+    color: var(--color-texto);
     text-decoration: none;
     justify-content: space-between;
     box-sizing: border-box;
-    }
+}
 
 .cancion:hover,
 .cancion:focus-visible {
     transform: translateY(-6px);
-    background: #534e40;
-    border-color: #fff;
+    background: var(--color-tarjeta-hover);
+    border-color: var(--color-acento);
 }
 
 .cancion-titulo {
@@ -215,7 +246,7 @@ body .logoppal img {
 
 .cancion-album {
     font-size: 1rem;
-    color: #aaa;
+    color: var(--color-texto-suave);
 }
 
 .informacion-cancion {
@@ -225,11 +256,11 @@ body .logoppal img {
     max-width: 100%;
     height: 250px;
     align-items: center;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: center;
     gap: 0.5rem;
-    border-top: 5px solid #2a2a2a;
-    border-bottom: 5px solid #2a2a2a;
+    border-top: 5px solid var(--color-borde);
+    border-bottom: 5px solid var(--color-borde);
 }
 
 .informacion-cancion img {
@@ -239,12 +270,12 @@ body .logoppal img {
 }
 
 footer {
-    background-color: #b5a98a;
+    background-color: var(--color-header);
     width: 100%;
     margin-top: 40px;
     padding: 30px 40px 15px;
     font-family: 'Courier New', Courier, monospace;
-    color: #121212;
+    color: var(--color-sobre-header);
 }
 
 .footer-columnas {
@@ -258,17 +289,18 @@ footer {
 
 .columna-footer {
     min-width: 200px;
-    max-width: 400px; /* para que el texto largo no ocupe todo el ancho */
+    max-width: 400px;
+    /* para que el texto largo no ocupe todo el ancho */
 }
 
 footer h4 {
-    color: #121212;
+    color: var(--color-sobre-header);
     margin-top: 0;
 }
 
 footer a {
     display: block;
-    color: #121212;
+    color: var(--color-sobre-header);
     text-decoration: none;
     font-weight: bold;
     margin-bottom: 8px;
@@ -279,7 +311,7 @@ footer a:hover {
 }
 
 .copyright {
-    border-top: 1px solid #121212;
+    border-top: 1px solid var(--color-sobre-header);
     margin-top: 20px;
     padding-top: 10px;
     font-size: 14px;
@@ -295,24 +327,23 @@ footer a:hover {
     border: none;
     cursor: pointer;
     padding: 8px;
-    
+
 }
 
 .btn-menu p {
-    font-size: 2; /* Oculta el texto del botón */
+    font-size: 2;
     font-family: "Open Sans", Arial, sans-serif;
 }
 
 
-/* Panel lateral: arranca fuera de pantalla, a la izquierda */
 .menu-lateral {
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 260px;
-    background-color: #121212;
-    border-right: 3px solid #b5a98a;
+    background-color: var(--color-fondo);
+    border-right: 3px solid var(--color-acento);
     padding: 80px 24px 24px;
     display: flex;
     flex-direction: column;
@@ -323,7 +354,7 @@ footer a:hover {
 }
 
 .menu-lateral a {
-    color: #b5a98a;
+    color: var(--color-texto);
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
     text-decoration: none;
@@ -337,7 +368,6 @@ footer a:hover {
     transform: translateX(0);
 }
 
-/* Fondo oscuro detrás del panel */
 .overlay {
     position: fixed;
     inset: 0;
