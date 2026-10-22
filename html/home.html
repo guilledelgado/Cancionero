@@ -1,41 +1,91 @@
 <!DOCTYPE html>
-    <html lang="es">
-        <head>
-            <title>Cancionero - Acordes para guitarra</title>
-            <meta charset="UTF-8"/>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-            <link rel="stylesheet" href="../css/style.css"/>
-            <link rel="icon" href="../multimedia/cancionero-logo-negro.png" type="image/png"/>
-        </head>
-        <body>
-            <header>
-                <div class="logo">
-                    <a href="home.html"><img src="../multimedia/cancionero-logo-negro.png" alt="Logo del sitio"></a>
-                </div>
-                <nav class="links-navegacion">
-                    <a href="home.html">Inicio</a>
-                </nav>
-            </header>
-            <div class="logoppal">
-            <a href="home.html"><img src="../multimedia/cancionero-logo-dorado.png" alt="Logo del sitio"></a>
+<html lang="es">
+
+<head>
+    <title>Cancionero - Acordes para guitarra</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../multimedia/cancionero-logo-negro.png" type="image/png" />
+</head>
+
+<body>
+    <header>
+
+        <button class="btn-menu" id="btnMenu" aria-label="Abrir menú" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="logo">
+            <a href="home.html"><img src="../multimedia/cancionero-logo-negro.png" alt="Logo del sitio"></a>
+        </div>
+        <nav class="links-navegacion">
+            <a href="home.html">Inicio</a>
+        </nav>
+    </header>
+
+    <nav class="menu-lateral" id="menuLateral">
+        <a href="home.html">Inicio</a>
+        <a href="home.html">Artistas</a>
+        <a href="home.html">Aprender musica</a>
+        <a href="home.html">Herramientas</a>
+        <a href="home.html">Mi biblioteca</a>
+    </nav>
+
+    <!-- Fondo oscuro que tapa la página cuando el menú está abierto -->
+    <div class="overlay" id="overlay"></div>
+
+    <div class="container">
+        <h2>Artistas recomendados</h2>
+        <div class="containerArtistas">
+            <div class="bloque-artista">
+                <a href="airbag/airbag.html"><img src="../multimedia/airbag.png"></a>
+                <h4>Airbag</h4>
+            </div>
+            <div class="bloque-artista">
+                <a href="patricio-rey/patricio-rey-y-sus-redonditos-de-ricota.html"><img
+                        src="../multimedia/logo-PR.png"></a>
+                <h4>Patricio Rey y sus Redonditos de Ricota</h4>
+            </div>
+            <div class="bloque-artista">
+                <a href="Soda/Soda_Stereo.html"><img src="../multimedia/soda-stereo.png"></a>
+                <h4>Soda Stereo</h4>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-columnas">
+
+            <div class="columna-footer">
+                <h4>Sobre Cancionero</h4>
+                <p>Cancionero es un proyecto con acordes de guitarra de bandas argentinas</p>
             </div>
 
-            <div class="container">
-                <h2>Artistas recomendados</h2>
-                <div class="containerArtistas">
-                    <div class="bloque-artista">
-                        <a href="airbag/airbag.html"><img src="../multimedia/airbag.png"></a>
-                        <h4>Airbag</h4>
-                    </div>
-                    <div class="bloque-artista">
-                        <a href="patricio-rey/patricio-rey-y-sus-redonditos-de-ricota.html"><img src="../multimedia/logo-PR.png"></a>
-                        <h4>Patricio Rey y sus Redonditos de Ricota</h4>
-                    </div>
-                    <div class="bloque-artista">
-                        <a href = "Soda/Soda_Stereo.html"><img src="../multimedia/soda-stereo.png"></a>
-                        <h4>Soda Stereo</h4>
-                    </div>
-                </div>
+            <div class="columna-footer">
+                <h4>Contacto</h4>
+                <a href="https://github.com/TU-USUARIO/TU-REPO" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.instagram.com/TU-USUARIO" target="_blank" rel="noopener noreferrer">Instagram</a>
             </div>
-        </body>   
-    </html>
+        </div>
+        <p class="copyright">© 2026 Cancionero</p>
+    </footer>
+
+    <script>
+        const btnMenu = document.getElementById("btnMenu");
+        const menu = document.getElementById("menuLateral");
+        const overlay = document.getElementById("overlay");
+
+        function alternarMenu() {
+            const abierto = menu.classList.toggle("abierto");
+            overlay.classList.toggle("visible", abierto);
+            btnMenu.setAttribute("aria-expanded", abierto);
+        }
+
+        btnMenu.addEventListener("click", alternarMenu);
+        overlay.addEventListener("click", alternarMenu); // click afuera = cerrar
+    </script>
+</body>
+
+</html>
