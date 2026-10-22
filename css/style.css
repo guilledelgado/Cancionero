@@ -48,6 +48,7 @@ header {
     padding: 10px 24px;
     display: flex;
     align-items: center;
+    flex-wrap:wrap;
     justify-content:space-around;
     position: relative; 
 }
@@ -56,14 +57,22 @@ header .logo img {
     width: 150px;
     height: auto;
     display: block;
-}   
+}
 
+header input[type="search"] {
+    padding: 8px;
+    border-radius: 20px;
+    font-size: 16px;
+    width: 300px;
+}
 .links-navegacion {
-    
     gap: 30px;
     border-radius: 20px;
-    border: 3px solid #121212;
     padding: 15px;
+}
+
+.links-navegacion:hover {
+    background-color: #aaa390;
 }
 
 .links-navegacion a {
@@ -72,6 +81,7 @@ header .logo img {
     text-decoration: none;
     box-sizing: border-box;
 }
+
 .container {
     text-align: center;
     margin-top: 20px;
@@ -285,18 +295,14 @@ footer a:hover {
     border: none;
     cursor: pointer;
     padding: 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+    
 }
 
-.btn-menu span {
-    display: block;
-    width: 28px;
-    height: 3px;
-    background-color: #121212;
-    border-radius: 2px;
+.btn-menu p {
+    font-size: 2; /* Oculta el texto del botón */
+    font-family: "Open Sans", Arial, sans-serif;
 }
+
 
 /* Panel lateral: arranca fuera de pantalla, a la izquierda */
 .menu-lateral {
