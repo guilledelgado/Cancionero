@@ -4,30 +4,29 @@
 
 
 :root {
-    --azul-50:  #EBF3FE;
-    --azul-100: #D3E5FC;
-    --azul-200: #B0D0F9;
-    --azul-300: #85B6F5;
-    --azul-400: #5A9BF0;
-    --azul-500: #3380E8;
-    --azul-600: #2565C4;
-    --azul-700: #1F509D;
-    --azul-800: #1C427D;
-    --azul-900: #152F59;
-    --azul-950: #08121F;
+        --neutro-50:  #FAF8F5;
+    --neutro-100: #F0ECE4;
+    --neutro-200: #E0D9CB;
+    --neutro-300: #CFC5B1;
+    --neutro-400: #B5A98A;
+    --neutro-500: #968B72;
+    --neutro-600: #7A715F;
+    --neutro-700: #5C5649;
+    --neutro-800: #3D3A33;
+    --neutro-900: #232120;
+    --neutro-950: #121212;
 
 
-    --color-fondo: var(--azul-950);
-    --color-texto: var(--azul-200);
-    --color-header: var(--azul-400);
-    --color-sobre-header: var(--azul-950);
-    --color-tarjeta: var(--azul-900);
-    --color-borde: var(--azul-800);
-    --color-acento: var(--azul-500);
-    --color-hover-header: var(--azul-500);
-    --color-tarjeta-hover: var(--azul-800);
-    --color-texto-suave: var(--azul-400);
-}
+    --color-fondo: var(--neutro-950);
+    --color-texto: var(--neutro-100);
+    --color-header: var(--neutro-400);
+    --color-sobre-header: var(--neutro-950);
+    --color-tarjeta: var(--neutro-900);
+    --color-borde: var(--neutro-800);
+    --color-acento: var(--neutro-300);
+    --color-hover-header: var(--neutro-300);
+    --color-tarjeta-hover: var(--neutro-800);
+    --color-texto-suave: var(--neutro-500);
 
 body {
     background-color: var(--color-fondo);
