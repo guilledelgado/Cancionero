@@ -12,31 +12,16 @@
 <body>
     <header>
 
-        <button class="btn-menu" id="btnMenu" aria-label="Abrir menú" aria-expanded="false">
-            <p>Menu</p>
-        </button>
-
         <div class="logo">
             <a href="home.html"><img src="../multimedia/cancionero-logo-negro.png" alt="Logo del sitio"></a>
         </div>
-
+        
         <input type="search" id="buscador" placeholder="Buscar artista o canción">
 
         <nav class="links-navegacion">
             <a href="home.html">Artistas</a>
         </nav>
     </header>
-
-    <nav class="menu-lateral" id="menuLateral">
-        <a href="home.html">Inicio</a>
-        <a href="home.html">Artistas</a>
-        <a href="home.html">Aprender musica</a>
-        <a href="home.html">Herramientas</a>
-        <a href="home.html">Mi biblioteca</a>
-    </nav>
-
-    <!-- Fondo oscuro que tapa la página cuando el menú está abierto -->
-    <div class="overlay" id="overlay"></div>
 
     <div class="container">
         <h2>Artistas recomendados</h2>
@@ -74,21 +59,6 @@
         </div>
         <p class="copyright">© 2026 Cancionero</p>
     </footer>
-
-    <script>
-        const btnMenu = document.getElementById("btnMenu");
-        const menu = document.getElementById("menuLateral");
-        const overlay = document.getElementById("overlay");
-
-        function alternarMenu() {
-            const abierto = menu.classList.toggle("abierto");
-            overlay.classList.toggle("visible", abierto);
-            btnMenu.setAttribute("aria-expanded", abierto);
-        }
-
-        btnMenu.addEventListener("click", alternarMenu);
-        overlay.addEventListener("click", alternarMenu); // click afuera = cerrar
-    </script>
 </body>
 
 </html>
