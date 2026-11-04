@@ -1,20 +1,37 @@
 *{
     box-sizing: border-box;
 }
+
+:root{
+    --color-body: #272319;
+    --color-superficie: #383325;
+    --color-texto: #faf9f7;
+    --color-detalles: #b5a98a;
+    --color-texto-secundario: #8c8471;
+}
+
+.inter-fuente-normal {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body{
-    background-color: #121212;;
+    background-color: var(--color-body);
     display: grid;
     justify-items: center;
     align-items: center;
+    font-family: 'Inter', sans-serif;
 }
 h1{
     color:#b5a98a;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Inter', sans-serif;
     font-size: 72px;
 }
 h2{
     color:#b5a98a;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Inter', sans-serif;
     font-size: 24px;
     text-align: left;
     margin-top: 10px;
@@ -37,13 +54,15 @@ h4{
 }
 
 header {
-    background-color: #b5a98a;
+    background-color: var(--color-superficie);
     height: 70px;
     width: 100%;
     padding: 10px 24px;
+    border-bottom: 1px solid var(--color-detalles);
     display: flex;
     align-items: center;
-    justify-content:space-around;
+    justify-content:space-between;
+    font-family: 'Inter', sans-serif;
 }
 
 header .logo img {
@@ -52,16 +71,41 @@ header .logo img {
     display: block;
 }
 
-.links-navegacion {
-    display: flex;
-    gap: 20px;
+footer {
+    background-color: var(--color-superficie);
+    color: var(--color-texto-secundario);
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    border-top: 1px solid var(--color-detalles);
+    font-family: 'Inter', sans-serif;
 }
 
-.links-navegacion a {
-    color:#121212;
-    font-family: 'Courier New', Courier, monospace;
+.links-navegacion {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.links-navegacion a.boton-destacado-claro {
+    background-color: var(--color-detalles);
+    color: var(--color-body);
+    padding: 8px 16px;
+    border-radius: 4px;
     text-decoration: none;
 }
+.links-navegacion a.boton-destacado-oscuro {
+    background-color: var(--color-body);
+    color: var(--color-texto);
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid var(--color-detalles);
+    text-decoration: none;
+}
+.links-navegacion a {
+    color: var(--color-texto);
+    text-decoration: none;
+}
+
 .container {
     text-align: center;
     margin-top: 20px;
