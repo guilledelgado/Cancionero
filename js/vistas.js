@@ -31,7 +31,7 @@ const slides = [
     },
     {
         imagen: '../multimedia/soda-stereo-portada.jpg',
-        link: '../html/soda/soda_stereo.html'
+        link: '../html/Soda/Soda_Stereo.html'
     },
     {
         imagen: '../multimedia/airbag-portada.jpg',
