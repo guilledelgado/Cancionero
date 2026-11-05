@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (cancion) {
     document.getElementById('titulo').textContent = cancion.titulo;
+    document.getElementById('title').textContent = cancion.titulo;
     document.getElementById('artista').textContent = cancion.artista;
     document.getElementById('tonalidad').textContent = cancion.tonalidad;
     document.getElementById('letra-acordes').textContent = cancion.letraYAcordes;
