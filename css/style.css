@@ -363,5 +363,15 @@ body .logoppal img {
     object-fit: cover;
 }
 
+.artista{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
+}
+.artista img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
 
