@@ -6,36 +6,27 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             <link rel="stylesheet" href="../css/style.css"/>
             <link rel="icon" href="../multimedia/cancionero-logo-negro.png" type="image/png"/>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+            <script src="../js/vistas.js" defer></script>
         </head>
         <body>
-            <header>
-                <div class="logo">
-                    <a href="home.html"><img src="../multimedia/cancionero-logo-negro.png" alt="Logo del sitio"></a>
-                </div>
-                <nav class="links-navegacion">
-                    <a href="home.html">Inicio</a>
-                </nav>
-            </header>
-            <div class="logoppal">
-            <a href="home.html"><img src="../multimedia/cancionero-logo-dorado.png" alt="Logo del sitio"></a>
+            <header></header>
+            <div class="pagina">
+                <img src="../multimedia/cancionero-logo-dorado.png" alt="Logo del Cancionero">
+                <h1>Aprende y toca tus canciones favoritas</h1>
+                <input type="search" id="buscador" placeholder="Buscar artista o canción">
+                <section class="banner-carrusel">
+                    <!-- El enlace cambia su href dinámicamente con JS -->
+                    <a id="carrusel-link" href="artistas.html">
+                        <img id="carrusel-img" src="../multimedia/banner1.jpg" alt="Destacado">
+                    </a>
+                        <!-- Botones opcionales de navegación -->
+                        <button id="btn-prev" class="carrusel-btn">&lt;</button>
+                        <button id="btn-next" class="carrusel-btn">&gt;</button>
+                </section>
             </div>
-
-            <div class="container">
-                <h2>Artistas recomendados</h2>
-                <div class="containerArtistas">
-                    <div class="bloque-artista">
-                        <a href="airbag/airbag.html"><img src="../multimedia/airbag.png"></a>
-                        <h4>Airbag</h4>
-                    </div>
-                    <div class="bloque-artista">
-                        <a href="patricio-rey/patricio-rey-y-sus-redonditos-de-ricota.html"><img src="../multimedia/logo-PR.png"></a>
-                        <h4>Patricio Rey y sus Redonditos de Ricota</h4>
-                    </div>
-                    <div class="bloque-artista">
-                        <a href = "Soda/Soda_Stereo.html"><img src="../multimedia/soda-stereo.png"></a>
-                        <h4>Soda Stereo</h4>
-                    </div>
-                </div>
-            </div>
-        </body>   
+            <footer> </footer>
+        </body>
     </html>
