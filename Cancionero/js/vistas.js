@@ -31,11 +31,7 @@ const slides = [
     },
     {
         imagen: '../multimedia/soda-stereo-portada.jpg',
-<<<<<<< HEAD:js/vistas.js
-        link: '../html/Soda/Soda_Stereo.html'
-=======
         link: '../html/soda/soda-stereo.html'
->>>>>>> ramaChichoNotebook:Cancionero/js/vistas.js
     },
     {
         imagen: '../multimedia/airbag-portada.jpg',
