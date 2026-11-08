@@ -1,0 +1,80 @@
+.portada{
+    background-size: cover;
+    background-position: top;
+    min-height: 100vh;
+    max-height: 100%;
+    max-width: 100%;
+    min-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #b5a98a;
+}
+
+.portada-contenido {
+    max-width: 1000px;
+    position: relative;
+    top: 10rem;
+}
+
+.portada-contenido h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.portada-contenido p {
+    font-size: 1.5rem;
+    line-height: 2;
+    text-shadow:
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.lista-canciones {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.canciones {
+    color: #fff;
+    padding: 5rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cancion {
+    display:flex;
+    gap: 14px;
+    height: 100%;
+    padding: 18px 20px;
+    width: 950px;
+    max-width: 100%;
+    margin: 0 auto;
+    background: #141414;
+    border: 5px solid #2a2a2a;
+    color: #b5a98a;
+    text-decoration: none;
+    justify-content: space-between;
+    box-sizing: border-box;
+    }
+
+.cancion:hover,
+.cancion:focus-visible {
+    transform: translateY(-6px);
+    background: #534e40;
+    border-color: #fff;
+}
