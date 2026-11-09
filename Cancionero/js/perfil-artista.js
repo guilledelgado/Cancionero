@@ -1,5 +1,6 @@
 const parametros = new URLSearchParams(window.location.search);
 const idArtista = parametros.get('id');
+
 // Base de datos de artistas
 const artistas = [
     {
@@ -7,7 +8,8 @@ const artistas = [
         nombre: 'Patricio Rey y sus Redonditos de Ricota',
         imagen: '../multimedia/logo-PR.png',
         portada: '../multimedia/patricio-rey-portada.jpeg',
-        canciones: ['etiqueta-negra'],
+        idCanciones: ['etiqueta-negra', 'el-pibe-de-los-astilleros'],
+        nombreCanciones: ['Etiqueta Negra', 'El pibe de los astilleros'],
         descripcion: 'Patricio Rey y sus Redonditos de Ricota fue una banda de rock argentino formada en 1976 en la ciudad de La Plata. La banda es conocida por su estilo musical único, que combina elementos de rock, punk y música experimental, así como por sus letras poéticas y enigmáticas. A lo largo de su carrera, los Redondos se convirtieron en un fenómeno cultural en Argentina, con una base de fans leales y apasionados que llenaban estadios y plazas para verlos tocar en vivo. La banda se disolvió en 2001, pero su legado musical sigue siendo influyente en la escena del rock argentino.'
     },
     {
@@ -15,7 +17,8 @@ const artistas = [
         nombre: 'Soda Stereo',
         imagen: '../multimedia/soda-stereo.png',
         portada: '../multimedia/soda-stereo-portada.jpg',
-        canciones: ['musica-ligera', 'en-la-ciudad-de-la-furia', 'persiana-americana'],
+        idCanciones: ['de-musica-ligera', 'en-la-ciudad-de-la-furia', 'persiana-americana'],
+        nombreCanciones: ['De música ligera', 'En la ciudad de la furia', 'Persiana americana'],
         descripcion: 'Soda Stereo es una banda de rock argentina formada en 1982 en Buenos Aires. Son considerados uno de los grupos más influyentes del rock latinoamericano y han tenido un impacto significativo en la escena musical argentina y regional.'
     },
     {
@@ -23,7 +26,8 @@ const artistas = [
         nombre: 'Airbag',
         imagen: '../multimedia/airbag.png',
         portada: '../multimedia/airbag-portada.jpg',
-        canciones: ['cae-el-sol', 'por-mil-noches'],
+        idCanciones: ['cae-el-sol', 'por-mil-noches'],
+        nombreCanciones: ['Cae el sol', 'Por mil noches'],
         descripcion: 'Airbag es una banda de rock argentino formada en 1999 en Buenos Aires. La banda está compuesta por los hermanos Patricio, Gastón y Guido Sardelli. Airbag ha lanzado varios álbumes de estudio y ha ganado reconocimiento tanto a nivel nacional como internacional.'
     }
 ];
@@ -39,12 +43,14 @@ if (portadaImg && portadaTexto) {
         portadaTexto.textContent = datos.descripcion;
 
         const cancionesContainer = document.querySelector('.lista-canciones');
-        if(cancionesContainer){
-            datos.canciones.forEach(cancion => {
-            cancionesContainer.insertAdjacentHTML('beforeend', `<p>${cancion}</p>`);
+        if (cancionesContainer) {
+            datos.idCanciones.forEach((cancion, indice) => {
+                cancionesContainer.insertAdjacentHTML('beforeend', `                
+                <a href="cancion.html?id=${cancion}" class="cancion">${datos.nombreCanciones[indice]}</a>
+                `);
             });
         }
-        
+
     } else {
         portadaImg.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)),url('../multimedia/404.jpg')`;
         portadaTexto.textContent = 'Artista no encontrado';

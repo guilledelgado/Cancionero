@@ -6,50 +6,53 @@ const canciones = [
     album: "Canción Animal",
     anio: 1990,
     tonalidad: "Bm",
-    portada: "../../multimedia/logo-musica-ligera.jpg",
+    portada: "../multimedia/logo-musica-ligera.jpg",
     letraYAcordes: `
-# Intro
-[SIm SOL RE LA x4]
+Ella durmió
+Al calor de las masas
+Y yo desperté
+Queriendo soñarla
 
-# Verso 1
-[SIm]Ella durm[SOL]ió [RE]al c[LA]alor de la[SIm]s m[SOL]asas[RE][LA]
-Y [SIm]yo despe[SOL]rté [RE]queri[LA]endo so[SIm]ñar[SOL]la[RE][LA]
-[SIm]Algún tiempo at[SOL]rás [RE]pen[LA]sé en escr[SIm]ibi[SOL]rle[RE][LA]
-[SIm]Que nunca sorte[SOL]é [RE]las [LA]trampas d[SIm]el [SOL]amor[RE][LA]
+Algún tiempo atrás
+Pensé en escribirle
+Que nunca sorteé
+Las trampas del amor
 
-# Estribillo
-[SIm]De aquel amor[SOL][RE] de mú[LA]sica liger[SIm]a[SOL][RE][LA]
-[SIm]Nada nos libr[SOL]a, [RE]nada [LA]más queda[SIm][SOL][RE][LA]
+De aquel amor
+De música ligera
+Nada nos libra
+Nada más queda
 
-# Solo corto
-[SIm SOL RE LA x4]
+No le enviaré
+Cenizas de rosas
+Ni pienso evitar
+Un roce secreto
 
-# Verso 2
-[SIm]No le enviaré[SOL][RE] ceni[LA]zas de ros[SIm]as[SOL][RE][LA]
-[SIm]Ni pienso evita[SOL]r [RE]un roc[LA]e secreto[SIm][SOL][RE]
+De aquel amor
+De música ligera
+Nada nos libra
+Nada más queda
 
-# Estribillo
-[SIm]De aquel amor[SOL][RE] de mú[LA]sica liger[SIm]a[SOL][RE][LA]
-[SIm]Nada nos libr[SOL]a, [RE]nada [LA]más queda[SIm][SOL][RE][LA]
+De aquel amor
+De música ligera
+Nada nos libra
+Nada más queda
 
-# Solo largo
-[SIm SOL RE LA x8]
+Nada más
 
-# Estribillo
-[SIm]De aquel amor[SOL][RE] de mú[LA]sica liger[SIm]a[SOL][RE][LA]
-[SIm]Nada nos libr[SOL]a, [RE]nada [LA]más queda[SIm][SOL][RE][LA]
-
-# Final
-[SIm]Nada [SOL]más [RE]queda[LA] (se repite)
+Nada más queda
+Nada más queda
+Nada más queda
+Nada más queda
 `
-  },{
-id: "en-la-cuidad-de-la-furia",
+  }, {
+    id: "en-la-ciudad-de-la-furia",
     titulo: "En la Ciudad de la Furia",
     artista: "Soda Stereo",
     album: "Cancion Animal",
     anio: 1990,
     tonalidad: "Em",
-    portada: "../../multimedia/logo-En-la-Ciudad-De-la-Furia.jpg",
+    portada: "../multimedia/logo-En-la-Ciudad-De-la-Furia.jpg",
     letraYAcordes: `
 Me verás volar
 Por la ciudad de la furia
@@ -115,13 +118,13 @@ Me verás volver
 A la ciudad de la furia
 `
   }, {
- id: "persiana-americana",
+    id: "persiana-americana",
     titulo: "Persiana Americana",
     artista: "Soda Stereo",
     album: "Signos",
     anio: 1986,
     tonalidad: "Bm",
-    portada: "../../multimedia/logo-Persiana-Americana.jpg",
+    portada: "../multimedia/logo-Persiana-Americana.jpg",
     letraYAcordes: `
 Yo te prefiero
 Fuera de foco
@@ -183,4 +186,212 @@ Creo que nunca lo podré saber
 Solo así yo te veré
 A través de mi persiana americana
 `
-  }];
+  }, {
+    id: "por-mil-noches",
+    titulo: "Por mil noches",
+    artista: "Airbag",
+    album: "Libertad",
+    anio: 2013,
+    tonalidad: "C#m",
+    portada: "../multimedia/airbag-libertad.jpg",
+    letraYAcordes: `
+Estoy arrepentido
+Y me gana la nostalgia
+Será que lo divino
+No mezcló muy bien las cartas
+   
+Será cuestión de suerte
+Que sigamos separados
+Quisiera encerrarte
+Por mil noches, por mil años
+   
+Sigo sin saber nada de vos
+En este incendio
+Cada vez que estás cerca de mí
+Es un infierno
+    
+Desde el día en que te conocí
+Quisiera encontrarte
+Algún día en mi camino
+¿No ves que sigo atado
+    
+A un recuerdo que no olvido?
+Y tengo tantas cosas
+Que decirte al oído
+Mentiras o verdades
+    
+Que no importa, da lo mismo
+Sigo sin saber nada de vos
+En este incendio
+Cada vez que estás cerca de mí
+   
+Es un infierno
+Sigo sin saber nada de vos
+En este incendio
+Cada vez que estás cerca de mí
+    
+Es un infierno
+Hace un tiempo estoy así
+No puedo dormir
+Desde el día en que te conocí
+   
+Y las horas en la noche
+Vuelan en la madrugada
+Donde brillan las estrellas
+Donde ya no queda nada
+   
+Y la noche me sorprende
+Y me arranca las entrañas
+Y me mata poco a poco
+Me va dejando sin nada
+   
+Y tu risa se desborda
+Donde mueren las promesas
+No me pidas que me enoje
+Si enojarse es tu destreza
+   
+Y no olvides que nos dimos
+Todo lo que nos quedaba
+Sin embargo, casi nunca
+Nunca no nos alcanzaba
+    
+Esa noche que te fuiste
+Y que empezamos a odiarnos
+Cada día que se vuela
+Cada vez yo más te extraño
+`
+  }, {
+    id: "cae-el-sol",
+    titulo: "Cae el sol",
+    artista: "Airbag",
+    album: "Voragine",
+    anio: 2011,
+    tonalidad: "C#m",
+    portada: "../multimedia/airbag-voragine.jpg",
+    letraYAcordes: `
+Cae el sol en tu balcón
+Y el ritual se terminó
+La verdad es que no ha sido fácil, ah-ah
+La verdad es que no ha sido fácil para los dos
+Sigo aquí esperando por ti
+
+Yo quiero ir a algún lugar en donde pueda despertar
+Yo quiero verte sonreír y que no tengas que mentir
+Nos ves que estoy, estoy aquí dejando toda mi verdad
+No queda nadie en la ciudad pero por vos me quedo acá
+
+Esperando por ti
+
+Y no sé que fue de más
+Yo no sé que estuvo mal
+Y la luz me cegó en tu camino, ah-ah
+Descubrí, entendí el infinito entre los dos
+Sigo aquí esperando por ti
+
+Yo quiero ir a algún lugar en donde pueda despertar
+Yo quiero verte sonreír y que no tengas que mentir
+No ves que estoy, estoy aquí dejando toda mi verdad
+No queda nadie en la ciudad pero por vos me quedo acá
+
+Sigo aquí y esperando por ti
+Uh, no sé cómo voy a hacer
+
+Yo quiero ir a algún lugar en donde pueda despertar
+Yo quiero verte sonreír (no sé cómo voy a hacer)
+Y que no tengas que mentir
+No ves que estoy, estoy aquí gritando toda mi verdad
+No queda nadie en la ciudad pero por vos me quedo acá
+
+Uh, yeah, yeah-yeah-yeah
+Sigo esperando por los dos
+
+Yo quiero ir a algún lugar en donde pueda despertar
+Yo quiero verte sonreír (no sé cómo voy a hacer)
+Y que no tengas que mentir
+No ves que estoy, estoy aquí gritando toda mi verdad
+No queda nadie en la ciudad pero por vos me quedo acá
+`
+  }, 
+  
+  {
+    id: "etiqueta-negra",
+    titulo: "Etiqueta Negra",
+    artista: "Patricio Rey y sus Redonditos de Ricota",
+    album: "Cordero Atado",
+    anio: 1993,
+    tonalidad: "Am",
+    portada: "../multimedia/cordero-atado.jpeg",
+    letraYAcordes: `
+Venía rápido
+Muy rápido y se le soltó un patín
+A él, que era el rey de esta jungla
+Se le soltó un patín
+
+Su corazón no era un hotel
+Aunque corría ese rumor
+Y hoy tiene una, entre otras cruces
+En este bosque siempre cruel
+
+Dejó un billete
+Que pide a gritos que lo gasten
+
+Como una hoja
+Derivó, en tú mismo, turbio río
+
+Entre amuletos y talismanes
+Su destino desafió
+Si su nariz crecía de tamaño
+Prometía más
+
+No le robaba nunca nada a nadie
+A nadie en especial
+Ganó un orzuelo de tercer ojo
+Y su nariz sangró
+
+No hubo caricias
+Para su celo moro
+
+Y ahora mira
+Crecer las flores desde abajo
+`
+  }, {
+    id: "el-pibe-de-los-astilleros",
+    titulo: "El pibe de los astilleros",
+    artista: "Patricio Rey y sus Redonditos de Ricota",
+    album: "La mosca y la sopa",
+    anio: 1991,
+    tonalidad: "Em",
+    portada: "../multimedia/la-mosca-y-la-sopa.jpeg",
+    letraYAcordes: `
+Fue unos meses a Caseros y su Strato roja
+Se hizo el torbellino que hoy suena en la radio
+La ceniza no caía desde su cigarro
+Y estaba, en sus ojos, desarmándote
+
+Alquiló una rana rubia, tibia y haragana
+Se moría de ganas de matarla
+Una linda damita de Concordia
+El más bello fuselaje que jamás lustró
+
+Le hizo un par de promesas imprudentes
+Y así fue que, de ellas, se aburrió
+Las minitas aman los payasos
+Y la pasta de campeón
+
+El pibe de los astilleros nunca se rendía
+Tuvo un palacete por un par de días
+Rapiñaba montado a los containers
+El maldito amor que tanto miedo da
+
+Fue por una lluvia que realmente moje
+(Que pusiera fin a su aventura)
+Un final feliz para pimpollos
+Allí estaba, al fin, acechándolo
+
+Ciertos reyes no viajan en camello
+Ellos andan al tranco del amor
+Esos tipos soplan con el viento
+Al rebaño y su temor
+`
+  }
+];
