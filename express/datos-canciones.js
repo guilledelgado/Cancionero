@@ -395,3 +395,5 @@ Al rebaño y su temor
 `
   }
 ];
+
+module.exports = canciones;

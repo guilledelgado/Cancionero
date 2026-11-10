@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const path = require('path');
+const rutasCanciones = require('./rutas-canciones');
 
 app.use(express.static(path.join(__dirname, '../Cancionero')));
 
@@ -28,6 +29,9 @@ app.get('/cancion.html', (req, res) => {
 app.get('/perfil-artista.html', (req, res) => {
     res.sendFile(path.join(__dirname, '../Cancionero/html/perfil-artista.html'));
 });
+
+app.use(express.json());
+app.use('/api/canciones', rutasCanciones);
 
 app.listen(port, () => {
     console.log(`Servidor corriendo en http://localhost:${port}`);
