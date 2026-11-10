@@ -21,16 +21,12 @@ app.get('/canciones.html', (req, res) => {
     res.sendFile(path.join(__dirname, '../Cancionero/html/canciones.html'));
 });
 
-app.get('/patricio-rey/patricio-rey-y-sus-redonditos-de-ricota.html', (req, res) => {
-    res.sendFile(path.join(__dirname, '../Cancionero/html/patricio-rey/patricio-rey-y-sus-redonditos-de-ricota.html'));
+app.get('/cancion.html', (req, res) => {
+    res.sendFile(path.join(__dirname, '../Cancionero/html/cancion.html'));
 });
 
-app.get('/soda/soda-stereo.html', (req, res) => {
-    res.sendFile(path.join(__dirname, '../Cancionero/html/soda/soda-stereo.html'));
-});
-
-app.get('/airbag/airbag.html', (req, res) => {
-    res.sendFile(path.join(__dirname, '../Cancionero/html/airbag/airbag.html'));
+app.get('/perfil-artista.html', (req, res) => {
+    res.sendFile(path.join(__dirname, '../Cancionero/html/perfil-artista.html'));
 });
 
 app.listen(port, () => {
