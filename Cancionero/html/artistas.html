@@ -1,22 +1,50 @@
 <!DOCTYPE html>
-    <html lang="es">
-        <head>
-            <title>Cancionero - Acordes para guitarra</title>
-            <meta charset="UTF-8"/>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-            <link rel="stylesheet" href="../css/style.css"/>
-            <link rel="icon" href="../multimedia/cancionero-logo-negro.png" type="image/png"/>
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-            <script src="../js/vistas.js" defer></script>
-            <script src="../js/perfil-artista.js" defer></script>
-        </head>
-        <body>
-            <header></header>
-            <section class="artistas">
+<html lang="es">
 
-            </section>
-            <footer></footer>
-        </body>
-    </html>
+<head>
+    <title>Cancionero - Acordes para guitarra</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../multimedia/cancionero-logo-negro.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script src="../js/vistas.js" defer></script>
+    <script src="../js/perfil-artista.js" defer></script>
+</head>
+
+<body>
+    <header></header>
+    <section class="contenedor-catalogo">
+        <h2 style="text-align: center; margin-top: 20px;">Artistas</h2>
+
+        <ul class="grid-artistas">
+            <li>
+                <a href="/perfil-artista.html?id=patricio-rey" class="tarjeta-artista">
+                    <img src="/multimedia/logo-pr.png" alt="Patricio Rey">
+                    <h3>Patricio Rey y sus Redonditos de Ricota</h3>
+                </a>
+            </li>
+
+            <li>
+                <a href="/perfil-artista.html?id=soda-stereo" class="tarjeta-artista">
+                    <img src="/multimedia/soda-stereo.png" alt="Soda Stereo">
+                    <h3>Soda Stereo</h3>
+                </a>
+            </li>
+
+            <li>
+                <a href="/perfil-artista.html?id=airbag" class="tarjeta-artista">
+                    <img src="/multimedia/airbag.png" alt="Airbag">
+                    <h3>Airbag</h3>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <footer></footer>
+</body>
+
+</html>

@@ -4,7 +4,7 @@ const canciones = require('./datos-canciones');
 const router = express.Router();
 
 function validarPaginacion(req, res, next) {
-    const { cantidad = '10', from = '0' } = req.query;
+    const { cantidad = '3', from = '0' } = req.query;
     const cantidadNum = Number(cantidad);
     const fromNum = Number(from);
     if (!Number.isInteger(cantidadNum) || cantidadNum < 1) {

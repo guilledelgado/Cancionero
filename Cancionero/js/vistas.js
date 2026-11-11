@@ -4,8 +4,8 @@ header.innerHTML = `<div class="logo">
                 </div>
                 <div class="buscador-navegacion">
                     <nav class="links-navegacion">
-                        <a href="artistas.html">Artistas</a>
-                        <a href="canciones.html">Canciones</a>
+                        <a href="/artistas.html">Artistas</a>
+                        <a href="/canciones.html">Canciones</a>
                         <a class="boton-destacado-claro" href="inicio-sesion.html">Iniciar Sesión</a>
                         <a class="boton-destacado-oscuro" href="registro.html">Registrarse</a>
                     </nav>
