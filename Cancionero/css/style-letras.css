@@ -1,0 +1,37 @@
+/* Contenedor general */
+.letra-cancion {
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: var(--color-detalles, #b5a98a);
+}
+
+/* El nuevo contenedor de cada línea */
+.renglon {
+    display: flex; 
+    flex-wrap: wrap; /* Si la pantalla del celular es chica, la letra baja sola sin romperse */
+    margin-bottom: 12px; /* Separación entre renglones */
+}
+
+/* El bloque que apila [Acorde + Sílaba] */
+.segmento {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Empuja la letra hacia abajo para que quede siempre alineada */
+}
+
+/* Estilo del acorde (arriba) */
+.acorde {
+    color: var(--color-texto, #faf9f7);
+    font-weight: bold;
+    font-size: 16px;
+    /* CLAVE: Si el acorde está vacío, mantiene la altura para que la letra no suba y se desalinee */
+    min-height: 24px; 
+}
+
+/* Estilo de la letra (abajo) */
+.letra {
+    color: var(--color-detalles, #b5a98a);
+    white-space: pre-wrap; /* Respeta los espacios en blanco que hayas dejado en tu base de datos */
+    line-height: 1;
+}
