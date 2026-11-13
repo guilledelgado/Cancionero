@@ -6,7 +6,7 @@ const canciones = [
     album: "Canción Animal",
     anio: 1990,
     tonalidad: "Bm",
-    portada: "../multimedia/logo-musica-ligera.jpg",
+    portada: "/multimedia/logo-musica-ligera.jpg",
     letraYAcordes: `
 Ella durmió
 Al calor de las masas
@@ -52,7 +52,7 @@ Nada más queda
     album: "Cancion Animal",
     anio: 1990,
     tonalidad: "Em",
-    portada: "../multimedia/logo-En-la-Ciudad-De-la-Furia.jpg",
+    portada: "/multimedia/logo-En-la-Ciudad-De-la-Furia.jpg",
     letraYAcordes: `
 Me verás volar
 Por la ciudad de la furia
@@ -124,7 +124,7 @@ A la ciudad de la furia
     album: "Signos",
     anio: 1986,
     tonalidad: "Bm",
-    portada: "../multimedia/logo-Persiana-Americana.jpg",
+    portada: "/multimedia/logo-Persiana-Americana.jpg",
     letraYAcordes: `
 Yo te prefiero
 Fuera de foco
@@ -193,7 +193,7 @@ A través de mi persiana americana
     album: "Libertad",
     anio: 2013,
     tonalidad: "C#m",
-    portada: "../multimedia/airbag-libertad.jpg",
+    portada: "/multimedia/airbag-libertad.jpg",
     letraYAcordes: `
 Estoy arrepentido
 Y me gana la nostalgia
@@ -267,7 +267,7 @@ Cada vez yo más te extraño
     album: "Voragine",
     anio: 2011,
     tonalidad: "C#m",
-    portada: "../multimedia/airbag-voragine.jpg",
+    portada: "/multimedia/airbag-voragine.jpg",
     letraYAcordes: `
 Cae el sol en tu balcón
 Y el ritual se terminó
@@ -320,7 +320,7 @@ No queda nadie en la ciudad pero por vos me quedo acá
     album: "Cordero Atado",
     anio: 1993,
     tonalidad: "Am",
-    portada: "../multimedia/cordero-atado.jpeg",
+    portada: "/multimedia/cordero-atado.jpeg",
     letraYAcordes: `
 Venía rápido
 Muy rápido y se le soltó un patín
@@ -361,7 +361,7 @@ Crecer las flores desde abajo
     album: "La mosca y la sopa",
     anio: 1991,
     tonalidad: "Em",
-    portada: "../multimedia/la-mosca-y-la-sopa.jpeg",
+    portada: "/multimedia/la-mosca-y-la-sopa.jpeg",
     letraYAcordes: `
 Fue unos meses a Caseros y su Strato roja
 Se hizo el torbellino que hoy suena en la radio
