@@ -8,8 +8,6 @@ const canciones = [
     tonalidad: "Bm",
     portada: "../multimedia/logo-musica-ligera.jpg",
     letraYAcordes: `
-<<<<<<< HEAD
-=======
 [Intro]
 [1] [6] [3] [7]
 [1] [6] [3] [7]
@@ -19,13 +17,10 @@ const canciones = [
 [1] [6] [3] [7]
 
 [Primera Parte]
->>>>>>> ramafacu
 [1]Ella durmi[6]ó[3]
 Al cal[7]or de las [1]masas[6][3][7]
 Y yo[1] desperté [6][3]
 Querie[7]ndo soña[1]rla [6][3][7]
-<<<<<<< HEAD
-=======
 [1]Algún tiempo a[6]tras [3][7]
 Pen[7]sé en escri[1]birle [6][3][7]
 Y [1]nunca sor[6]tié[3]
@@ -83,7 +78,6 @@ Nada más queda [1] [6] [3] [7]
 
 [Final]
 [6] [3]
->>>>>>> ramafacu
 `
   }, {
     id: "en-la-ciudad-de-la-furia",
@@ -190,13 +184,8 @@ Prefiere esta [4]noche
     artista: "Soda Stereo",
     album: "Signos",
     anio: 1986,
-<<<<<<< HEAD
-    tonalidad: "Bm",
-    portada: "../multimedia/logo-Persiana-Americana.jpg",
-=======
     tonalidad: "G",
     portada: "/multimedia/logo-Persiana-Americana.jpg",
->>>>>>> ramafacu
     letraYAcordes: `
 [Intro]
 [5] [3]
@@ -476,14 +465,6 @@ Pero por vos me qu[7]edo ac[1]á
     tonalidad: "Am",
     portada: "../multimedia/cordero-atado.jpeg",
     letraYAcordes: `
-<<<<<<< HEAD
-  [][Am]Venía r[Dsub2/B]ápido\n
-Muy r[C]ápido y se l[D]e solt[E]ó un pa[Am]tín\n
-A él, que e[Dsub2/B]ra el rey de esta j[C]ungla\n
-Se l[D]e solt[E]ó un pat[Am]ín\n
-
-
-=======
 [Intro]
 [1] [2] [5]
 [1] [2] [5]
@@ -533,7 +514,6 @@ Y ahora mir[3]a,   [4]   crecer las flores desde abajo.
 
 [Solo]
 [1] [2] [5]
->>>>>>> ramafacu
 `
   }, {
     id: "el-pibe-de-los-astilleros",
