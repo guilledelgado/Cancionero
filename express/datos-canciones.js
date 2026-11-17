@@ -6,44 +6,12 @@ const canciones = [
     album: "Canción Animal",
     anio: 1990,
     tonalidad: "Bm",
-    portada: "/multimedia/logo-musica-ligera.jpg",
+    portada: "../multimedia/logo-musica-ligera.jpg",
     letraYAcordes: `
-Ella durmió
-Al calor de las masas
-Y yo desperté
-Queriendo soñarla
-
-Algún tiempo atrás
-Pensé en escribirle
-Que nunca sorteé
-Las trampas del amor
-
-De aquel amor
-De música ligera
-Nada nos libra
-Nada más queda
-
-No le enviaré
-Cenizas de rosas
-Ni pienso evitar
-Un roce secreto
-
-De aquel amor
-De música ligera
-Nada nos libra
-Nada más queda
-
-De aquel amor
-De música ligera
-Nada nos libra
-Nada más queda
-
-Nada más
-
-Nada más queda
-Nada más queda
-Nada más queda
-Nada más queda
+[1]Ella durmi[6]ó[3]
+Al cal[7]or de las [1]masas[6][3][7]
+Y yo[1] desperté [6][3]
+Querie[7]ndo soña[1]rla [6][3][7]
 `
   }, {
     id: "en-la-ciudad-de-la-furia",
@@ -52,7 +20,7 @@ Nada más queda
     album: "Cancion Animal",
     anio: 1990,
     tonalidad: "Em",
-    portada: "/multimedia/logo-En-la-Ciudad-De-la-Furia.jpg",
+    portada: "../multimedia/logo-En-la-Ciudad-De-la-Furia.jpg",
     letraYAcordes: `
 Me verás volar
 Por la ciudad de la furia
@@ -124,7 +92,7 @@ A la ciudad de la furia
     album: "Signos",
     anio: 1986,
     tonalidad: "Bm",
-    portada: "/multimedia/logo-Persiana-Americana.jpg",
+    portada: "../multimedia/logo-Persiana-Americana.jpg",
     letraYAcordes: `
 Yo te prefiero
 Fuera de foco
@@ -193,7 +161,7 @@ A través de mi persiana americana
     album: "Libertad",
     anio: 2013,
     tonalidad: "C#m",
-    portada: "/multimedia/airbag-libertad.jpg",
+    portada: "../multimedia/airbag-libertad.jpg",
     letraYAcordes: `
 Estoy arrepentido
 Y me gana la nostalgia
@@ -267,7 +235,7 @@ Cada vez yo más te extraño
     album: "Voragine",
     anio: 2011,
     tonalidad: "C#m",
-    portada: "/multimedia/airbag-voragine.jpg",
+    portada: "../multimedia/airbag-voragine.jpg",
     letraYAcordes: `
 Cae el sol en tu balcón
 Y el ritual se terminó
@@ -320,39 +288,14 @@ No queda nadie en la ciudad pero por vos me quedo acá
     album: "Cordero Atado",
     anio: 1993,
     tonalidad: "Am",
-    portada: "/multimedia/cordero-atado.jpeg",
+    portada: "../multimedia/cordero-atado.jpeg",
     letraYAcordes: `
-Venía rápido
-Muy rápido y se le soltó un patín
-A él, que era el rey de esta jungla
-Se le soltó un patín
+  [][Am]Venía r[Dsub2/B]ápido\n
+Muy r[C]ápido y se l[D]e solt[E]ó un pa[Am]tín\n
+A él, que e[Dsub2/B]ra el rey de esta j[C]ungla\n
+Se l[D]e solt[E]ó un pat[Am]ín\n
 
-Su corazón no era un hotel
-Aunque corría ese rumor
-Y hoy tiene una, entre otras cruces
-En este bosque siempre cruel
 
-Dejó un billete
-Que pide a gritos que lo gasten
-
-Como una hoja
-Derivó, en tú mismo, turbio río
-
-Entre amuletos y talismanes
-Su destino desafió
-Si su nariz crecía de tamaño
-Prometía más
-
-No le robaba nunca nada a nadie
-A nadie en especial
-Ganó un orzuelo de tercer ojo
-Y su nariz sangró
-
-No hubo caricias
-Para su celo moro
-
-Y ahora mira
-Crecer las flores desde abajo
 `
   }, {
     id: "el-pibe-de-los-astilleros",
@@ -361,7 +304,7 @@ Crecer las flores desde abajo
     album: "La mosca y la sopa",
     anio: 1991,
     tonalidad: "Em",
-    portada: "/multimedia/la-mosca-y-la-sopa.jpeg",
+    portada: "../multimedia/la-mosca-y-la-sopa.jpeg",
     letraYAcordes: `
 Fue unos meses a Caseros y su Strato roja
 Se hizo el torbellino que hoy suena en la radio
