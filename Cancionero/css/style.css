@@ -130,11 +130,10 @@ header .buscador-navegacion input[type="search"] {
 .banner-carrusel img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Evita que la foto se deforme */
-    transition: opacity 0.5s ease; /* Transición suave al cambiar */
+    object-fit: cover; 
+    transition: opacity 0.5s ease;
 }
 
-/* Botones de navegación sobre la imagen */
 .carrusel-btn {
     position: absolute;
     top: 50%;
@@ -169,7 +168,7 @@ footer {
 .columna-footer {
     min-width: 200px;
     max-width: 400px;
-    /* para que el texto largo no ocupe todo el ancho */
+    
 }
 footer h4 {
     color: var(--color-detalles);

@@ -1,7 +1,6 @@
 const parametros = new URLSearchParams(window.location.search);
 const idArtista = parametros.get('id');
 
-// Base de datos de artistas
 const artistas = [
     {
         id: 'patricio-rey',
@@ -31,7 +30,7 @@ const artistas = [
         descripcion: 'Airbag es una banda de rock argentino formada en 1999 en Buenos Aires. La banda está compuesta por los hermanos Patricio, Gastón y Guido Sardelli. Airbag ha lanzado varios álbumes de estudio y ha ganado reconocimiento tanto a nivel nacional como internacional.'
     }
 ];
-// Logica para cargar la pagina de cada artista dinamicamente
+
 const portadaImg = document.querySelector('#portada');
 const portadaTexto = document.querySelector('#portada-texto');
 
@@ -58,8 +57,6 @@ if (portadaImg && portadaTexto) {
 }
 
 
-
-//Logica para cargar dinamicamente los artistas en el menu de artistas
 let artistasContainer = document.querySelector('.artistas');
 
 if (artistasContainer) {
@@ -84,7 +81,7 @@ if (artistasContainer) {
     });
 }
 
-// Logica para el carrusel del home
+
 
 const imgElemento = document.getElementById('carrusel-img');
 const linkElemento = document.getElementById('carrusel-link');
@@ -93,9 +90,9 @@ const btnNext = document.getElementById('btn-next');
 
 if (imgElemento && linkElemento && btnNext && btnPrev) {
     let indiceActual = 0;
-    // Función para actualizar la diapositiva en pantalla
+   
     function mostrarSlide(index) {
-        // Transición de opacidad previa
+     
         imgElemento.style.opacity = '0.3';
 
         setTimeout(() => {
@@ -106,7 +103,7 @@ if (imgElemento && linkElemento && btnNext && btnPrev) {
         }, 200);
     }
 
-    // Funciones para avanzar/retroceder
+   
     function siguienteSlide() {
         indiceActual = (indiceActual + 1) % artistas.length;
         mostrarSlide(indiceActual);
@@ -117,11 +114,10 @@ if (imgElemento && linkElemento && btnNext && btnPrev) {
         mostrarSlide(indiceActual);
     }
 
-    // Eventos de los botones
+  
     btnNext.addEventListener('click', siguienteSlide);
     btnPrev.addEventListener('click', anteriorSlide);
 
-    // Temporizador automático (cambia cada 10 segundos)
     setInterval(siguienteSlide, 10000);
 
     imgElemento.src = artistas[0].portada;
