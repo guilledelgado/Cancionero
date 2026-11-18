@@ -1,3 +1,4 @@
+
 const header = document.querySelector('header');
 header.innerHTML = `<div class="logo">
                     <a href="/home.html"><img src="../multimedia/cancionero-logo-dorado.png" alt="Logo del sitio"></a>
@@ -26,3 +27,18 @@ footer.innerHTML = `        <div class="footer-columnas">
             </div>
         </div>
         <p class="copyright">© 2026 Cancionero</p>`
+
+        header.insertAdjacentHTML('beforebegin', '<div id="barra-progreso"></div>');
+const barraProgreso = document.getElementById('barra-progreso');
+
+function actualizarBarraProgreso() {
+    const alturaDesplazable =
+        document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const porcentaje = alturaDesplazable > 0
+        ? (window.scrollY / alturaDesplazable) * 100
+        : 0;
+    barraProgreso.style.width = `${porcentaje}%`;
+}
+
+window.addEventListener('scroll', actualizarBarraProgreso, { passive: true });
+window.addEventListener('resize', actualizarBarraProgreso);

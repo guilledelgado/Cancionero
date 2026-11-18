@@ -1,4 +1,4 @@
-.portada{
+/*.portada{
     background-size: cover;
     background-position: top;
     min-height: 100vh;
@@ -77,4 +77,171 @@
     transform: translateY(-6px);
     background: #534e40;
     border-color: #fff;
+}
+
+*/
+
+/* --- HERO / PORTADA DEL ARTISTA --- */
+#portada.portada {
+    position: relative;
+    width: 100%;
+    min-height: 340px;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center 25%;
+    background-color: var(--color-superficie);
+    border-bottom: 1px solid var(--color-borde);
+    overflow: hidden;
+}
+
+/* Degradado inferior para fundir la foto con el fondo y asegurar lectura */
+#portada.portada::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        var(--color-body) 4%,
+        rgba(0, 0, 0, 0.55) 55%,
+        rgba(0, 0, 0, 0.2) 100%
+    );
+    pointer-events: none;
+}
+
+.portada-contenido {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 48px 24px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#portada-texto {
+    margin: 0;
+    color: var(--color-texto);
+    font-size: 2.0rem;
+    letter-spacing: -0.02em;
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.65);
+}
+
+/* --- SECCIÓN DE CANCIONES (ESTILO TRACKLIST) --- */
+.canciones {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 28px 24px 60px;
+}
+
+.canciones .titulo-seccion {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--color-texto);
+    margin: 0 0 20px 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--color-borde);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lista-canciones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Estilo de fila moderna (compatible tanto con <a> sueltos como con .tarjeta-cancion) */
+.lista-canciones a,
+.lista-canciones .tarjeta-cancion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 16px;
+    padding: 10px 16px;
+    background-color: var(--color-tarjeta);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--color-tarjeta-texto);
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.lista-canciones a:hover,
+.lista-canciones .tarjeta-cancion:hover {
+    background-color: var(--color-tarjeta-hover);
+    border-color: var(--color-borde);
+    transform: translateX(4px);
+}
+
+.lista-canciones a img,
+.lista-canciones .tarjeta-cancion img {
+    width: 52px;
+    height: 52px;
+    max-width: 52px;
+    margin: 0;
+    border-radius: 6px;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px var(--color-sombra-suave);
+}
+
+.lista-canciones .info-tarjeta {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+    flex: 1;
+}
+
+.lista-canciones h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-tarjeta-texto);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lista-canciones p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--color-tarjeta-subtexto);
+}
+
+/* Flecha sutil al final de cada fila */
+.lista-canciones a::after,
+.lista-canciones .tarjeta-cancion::after {
+    content: "→";
+    margin-left: auto;
+    font-size: 1.1rem;
+    color: var(--color-texto-secundario);
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.lista-canciones a:hover::after,
+.lista-canciones .tarjeta-cancion:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+    color: var(--color-acorde);
+}
+
+@media (max-width: 600px) {
+    #portada.portada {
+        min-height: 260px;
+    }
+
+    .lista-canciones a::after,
+    .lista-canciones .tarjeta-cancion::after {
+        display: none;
+    }
 }

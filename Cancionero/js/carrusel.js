@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     btnNext.addEventListener('click', siguienteSlide);
     btnPrev.addEventListener('click', anteriorSlide);
 
-    setInterval(siguienteSlide, 10000);
+    setInterval(siguienteSlide, 5000);
 
     imgElemento.src = artistas[0].portada;
     imgElemento.alt = artistas[0].nombre;

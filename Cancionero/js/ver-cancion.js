@@ -49,12 +49,12 @@ function obtenerContextoTonal(tonalidad) {
 }
 
 function traducirGrado(token, contexto) {
-  
+
   const [parteAcorde, parteBajo] = token.split('/');
 
- 
+
   const match = parteAcorde.match(/^([b#]?)([1-7])(.*)$/);
-  if (!match) return token; 
+  if (!match) return token;
   const [, alteracion, gradoStr, modificador] = match;
   const indice = parseInt(gradoStr, 10) - 1;
   const notaBase = contexto.notas[indice] + alteracion;
@@ -100,7 +100,7 @@ function generarHTMLCancion(texto, tonalidad) {
     }
 
     for (let i = 1; i < partes.length; i += 2) {
-      const gradoCrudo = partes[i].slice(1, -1); 
+      const gradoCrudo = partes[i].slice(1, -1);
       const acordeReal = traducirGrado(gradoCrudo, contexto);
       const letra = partes[i + 1] || '';
       html += crearSegmento(acordeReal, letra);
@@ -144,6 +144,41 @@ document.addEventListener('DOMContentLoaded', async () => {
     const imgPortada = document.getElementById('portada');
     imgPortada.src = cancion.portada;
     imgPortada.alt = `Tapa del disco de ${cancion.titulo}`;
+
+    aplicarEfectoTapa(imgPortada);
+
+    function aplicarEfectoTapa(elemento) {
+    if (!elemento) return;
+      const inclinacionMax = 14; // Grados máximos de giro (bájalo a 8 o 10 si lo quieres aún más sutil)
+
+      imgPortada.addEventListener('mouseenter', () => {
+        // Quita el retraso al entrar para que siga al mouse al instante
+        imgPortada.style.transition = 'transform 0.08s ease-out, box-shadow 0.2s ease';
+      });
+
+      imgPortada.addEventListener('mousemove', (e) => {
+        const rect = imgPortada.getBoundingClientRect();
+
+        // Calcula la posición del mouse relativa al centro de la imagen (valores de -0.5 a 0.5)
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+        // Invierte Y para que se hunda el borde donde está el cursor y no al revés
+        const rotarX = -y * inclinacionMax;
+        const rotarY = x * inclinacionMax;
+
+        imgPortada.style.transform = `perspective(350px) rotateX(${rotarX}deg) rotateY(${rotarY}deg) scale(0.97)`;
+        imgPortada.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.2)';
+      });
+
+      imgPortada.addEventListener('mouseleave', () => {
+        // Restaura la transición suave para que vuelva a su lugar sin golpes
+        imgPortada.style.transition = 'transform 0.35s ease, box-shadow 0.35s ease';
+        imgPortada.style.transform = 'perspective(350px) rotateX(0deg) rotateY(0deg) scale(1)';
+        imgPortada.style.boxShadow = '0 4px 10px var(--color-sombra-suave)';
+      });
+    }
+
 
     let tonalidad = cancion.tonalidad;
 
