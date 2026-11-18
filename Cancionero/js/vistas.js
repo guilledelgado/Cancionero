@@ -1,16 +1,41 @@
 const header = document.querySelector('header');
-header.innerHTML = `<div class="logo">
+async function cargarHeader() {
+    const respuesta = await fetch('/sesion');
+const datos = await respuesta.json();
+if(datos.logueado){
+    header.innerHTML = `<div class="logo">
                     <a href="/home.html"><img src="../multimedia/cancionero-logo-dorado.png" alt="Logo del sitio"></a>
                 </div>
                 <div class="buscador-navegacion">
                     <nav class="links-navegacion">
                         <a href="/artistas.html">Artistas</a>
                         <a href="/canciones.html">Canciones</a>
-                        <a class="boton-destacado-claro" href="inicio-sesion.html">Iniciar Sesión</a>
-                        <a class="boton-destacado-oscuro" href="registro.html">Registrarse</a>
+                        <p>${datos.usuario}</p>
+                        <a class="boton-destacado-claro cerrar-sesion">Cerrar sesión</a>
+                    </nav>
+
+                </div>`;
+    let botonCerrarSesion = document.querySelector(".cerrar-sesion");
+botonCerrarSesion.addEventListener("click", async()=>{
+    const respuesta = await fetch('/cerrar-sesion', {method: 'POST'});
+    window.location.href = '/';
+});
+} else {
+    header.innerHTML = `<div class="logo">
+                    <a href="/home.html"><img src="../multimedia/cancionero-logo-dorado.png" alt="Logo del sitio"></a>
+                </div>
+                <div class="buscador-navegacion">
+                    <nav class="links-navegacion">
+                        <a href="/artistas.html">Artistas</a>
+                        <a href="/canciones.html">Canciones</a>
+                        <a class="boton-destacado-claro" href="/inicio-sesion.html">Iniciar sesión</a>
                     </nav>
 
                 </div>`
+}
+}
+cargarHeader();
+
 const footer = document.querySelector('footer');
 footer.innerHTML = `        <div class="footer-columnas">
             <div class="columna-footer">

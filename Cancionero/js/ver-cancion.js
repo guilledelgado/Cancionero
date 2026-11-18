@@ -113,54 +113,64 @@ function generarHTMLCancion(texto, tonalidad) {
 }
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const idCancion = urlParams.get('id');
+document.addEventListener('DOMContentLoaded', async () => {
+  const idCancion = new URLSearchParams(window.location.search).get('id');
+  const elTitulo = document.getElementById('titulo');
 
-  fetch('/api/canciones?cantidad=100')
-    .then(res => res.json())
-    .then(data => {
-      const cancion = data.data.find(c => c.id === idCancion);
+  if (!idCancion) {
+    elTitulo.textContent = 'Falta indicar la canción';
+    return;
+  }
 
-      if (!cancion) {
-        console.error("Canción no encontrada en la base de datos.");
-        document.getElementById('titulo').textContent = "Canción no encontrada";
-        return;
-      }
+  try {
+    const res = await fetch(`/api/canciones/${encodeURIComponent(idCancion)}`);
 
-      document.getElementById('titulo').textContent = cancion.titulo;
-      document.getElementById('title').textContent = cancion.titulo;
-      document.getElementById('artista').textContent = cancion.artista;
+    if (res.status === 404 || res.status === 400) {
+      elTitulo.textContent = 'Canción no encontrada';
+      return;
+    }
+    if (!res.ok) {
+      throw new Error(`El servidor respondió con el código ${res.status}`);
+    }
 
-      const imgPortada = document.getElementById('portada');
-      imgPortada.src = cancion.portada;
-      imgPortada.alt = `Tapa del disco de ${cancion.titulo}`;
+    const cancion = await res.json();
 
-      let tonalidad = cancion.tonalidad;
+    elTitulo.textContent = cancion.titulo;
+    document.getElementById('title').textContent = cancion.titulo;
+    document.getElementById('artista').textContent = cancion.artista;
+    document.getElementById('album').textContent = cancion.album;
+    document.getElementById('anio').textContent = cancion.anio;
 
-     
-      function mostrarCancion() {
-        document.getElementById('tonalidad').textContent = tonalidad;
-        document.querySelector('.letra-cancion').innerHTML =
-          generarHTMLCancion(cancion.letraYAcordes, tonalidad);
-      }
+    const imgPortada = document.getElementById('portada');
+    imgPortada.src = cancion.portada;
+    imgPortada.alt = `Tapa del disco de ${cancion.titulo}`;
 
-      document.getElementById('disminuirTonalidad').addEventListener('click', () => {
-        tonalidad = moverTonalidad(tonalidad, -1);
-        mostrarCancion();
-      });
+    let tonalidad = cancion.tonalidad;
 
-      document.getElementById('aumentarTonalidad').addEventListener('click', () => {
-        tonalidad = moverTonalidad(tonalidad, 1);
-        mostrarCancion();
-      });
+    function mostrarCancion() {
+      document.getElementById('tonalidad').textContent = tonalidad;
+      document.querySelector('.letra-cancion').innerHTML =
+        generarHTMLCancion(cancion.letraYAcordes, tonalidad);
+    }
 
-      document.getElementById('resetearTonalidad').addEventListener('click', () => {
-        tonalidad = cancion.tonalidad;
-        mostrarCancion();
-      });
-
+    document.getElementById('disminuirTonalidad').addEventListener('click', () => {
+      tonalidad = moverTonalidad(tonalidad, -1);
       mostrarCancion();
-    })
-    .catch(error => console.error("Error al obtener los datos:", error));
+    });
+
+    document.getElementById('aumentarTonalidad').addEventListener('click', () => {
+      tonalidad = moverTonalidad(tonalidad, 1);
+      mostrarCancion();
+    });
+
+    document.getElementById('resetearTonalidad').addEventListener('click', () => {
+      tonalidad = cancion.tonalidad;
+      mostrarCancion();
+    });
+
+    mostrarCancion();
+  } catch (error) {
+    console.error('Error al obtener los datos:', error);
+    elTitulo.textContent = 'Error al cargar la canción';
+  }
 });
