@@ -1,6 +1,6 @@
 const header = document.querySelector('header');
 header.innerHTML = `<div class="logo">
-                    <a href="home.html"><img src="../multimedia/cancionero-logo-dorado.png" alt="Logo del sitio"></a>
+                    <a href="/home.html"><img src="../multimedia/cancionero-logo-dorado.png" alt="Logo del sitio"></a>
                 </div>
                 <div class="buscador-navegacion">
                     <nav class="links-navegacion">

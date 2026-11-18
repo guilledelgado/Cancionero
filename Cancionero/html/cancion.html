@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="/css/style.css" />
 	<link rel="stylesheet" href="/css/style-letras.css" />
-	<script src="../js/vistas.js" defer></script>
+	<script src="/js/vistas.js" defer></script>
 </head>
 
 <body class="pagina-cancion">
@@ -23,8 +23,13 @@
 				<h4 id="anio"></h4>
 				<h4>Tonalidad: <span id="tonalidad"></span></h4>
 			</div>
+			<section class="botonCambiarTonalidad">
+				<button id="disminuirTonalidad">-</button>
+				<button id="resetearTonalidad">Original</button>
+				<button id="aumentarTonalidad">+</button>
+			</section>
 		</section>
-		<pre id="letra-acordes"></pre>
+		<section class="letra-cancion"></section>
 	</main>
 	<script src="/js/ver-cancion.js"></script>
 	<footer></footer>
