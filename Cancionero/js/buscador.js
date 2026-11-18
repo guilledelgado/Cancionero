@@ -89,7 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
             ocultarResultados();
             return;
         }
-        // Esperamos 300 ms después de la última tecla para no pedir en cada letra
         temporizador = setTimeout(() => buscar(texto), 300);
     });
 

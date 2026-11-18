@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     setInterval(siguienteSlide, 10000);
 
-    // Primer slide
     imgElemento.src = artistas[0].portada;
     imgElemento.alt = artistas[0].nombre;
     linkElemento.href = '/perfil-artista.html?id=' + artistas[0].id;

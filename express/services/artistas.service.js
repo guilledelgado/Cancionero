@@ -18,7 +18,6 @@ function obtenerPorId(id) {
     if (!artista) {
         return undefined;
     }
-    // Las canciones del artista se arman a partir del catálogo de canciones
     const cancionesDelArtista = canciones
         .filter(c => c.artista === artista.nombre)
         .map(c => ({ id: c.id, titulo: c.titulo }));

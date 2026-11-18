@@ -1,7 +1,6 @@
 function validarBusqueda(req, res, next) {
     const { q } = req.query;
 
-    // La búsqueda es opcional: sin 'q' se devuelven todos
     if (q === undefined) {
         req.busqueda = '';
         return next();

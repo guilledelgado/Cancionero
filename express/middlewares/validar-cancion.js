@@ -31,8 +31,6 @@ function validarCancion(req, res, next) {
     if (errores.length > 0) {
         return res.status(400).json({ error: 'Datos inválidos', detalles: errores });
     }
-
-    // Nos quedamos solo con los campos permitidos
     req.cancion = {
         titulo: body.titulo.trim(),
         artista: body.artista.trim(),

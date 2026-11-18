@@ -1,3 +1,5 @@
+const CANTIDAD_MAXIMA = 100;
+
 function validarPaginacion(req, res, next) {
     const { cantidad = '3', from = '0' } = req.query;
     const cantidadNum = Number(cantidad);
