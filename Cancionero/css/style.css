@@ -74,6 +74,7 @@ header {
     align-items: center;
     justify-content:space-between;
     font-family: 'Inter', sans-serif;
+    color: var(--color-texto);
 }
 
 header .logo img {
