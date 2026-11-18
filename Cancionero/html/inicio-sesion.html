@@ -1,23 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cancionero - Acordes para guitarra</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/style-formularios.css" />
     <link rel="icon" href="../multimedia/cancionero-logo-negro.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+    <script src="/js/vistas.js" defer></script>
 </head>
+
 <body>
+    <header></header>
     <main class="formulario">
-        <h1>Inicia sesión</h1>
-        <input type="text" class="formulario-control" placeholder="Usuario" id="nombre-usuario">
-        <input type="password" class="formulario-control estado-sesion" placeholder="Contraseña" id="contraseña">
-        <span class="alerta">Usuario y/o contraseña incorrecto</span>
+        <div class="slider"></div>
+        <div class="switch-formulario">
+            <button class="login">Inicia sesión</button>
+            <button class="signup">Registrarse</button>
+        </div>
+        <div class="seccion-formulario">
+            <div class="formulario-login">
+                <input type="text" class="usuario ele" placeholder="Usuario" id="nombre-usuario">
+                <input type="password" class="contraseña ele" placeholder="Contraseña" id="contraseña">
+                <button class="clkbtn">Iniciar sesión</button>
+            </div>
+            <div class="formulario-registro">
+                <input type="text" class="usuario ele" placeholder="Nombre usuario">
+                <input type="email" class="email ele" placeholder="Email">
+                <input type="password" class="contraseña ele" placeholder="Contraseña">
+                <input type="password" class="contraseña ele" placeholder="Confirmar contraseña">
+                <button class="clkbtn">Registrarse</button>
+            </div>
+        </div>
     </main>
+    <footer></footer>
+    <script src="../js/pagina-login.js"></script>
 </body>
+
 </html>

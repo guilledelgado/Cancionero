@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(carpetaFront, 'html', 'home.html'));
 });
 
-['home', 'artistas', 'canciones', 'cancion', 'perfil-artista'].forEach(pagina => {
+['home', 'artistas', 'canciones', 'cancion', 'perfil-artista', 'inicio-sesion'].forEach(pagina => {
     app.get(`/${pagina}.html`, (req, res) => {
         res.sendFile(path.join(carpetaFront, 'html', `${pagina}.html`));
     });

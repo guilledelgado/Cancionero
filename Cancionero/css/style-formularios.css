@@ -1,0 +1,96 @@
+.button{
+    color:#faf9f7;
+}
+.formulario{
+    height: 600px;
+    width: 500px;
+    background-color: #383325;
+    box-shadow: 8px 8px 20px #b5a98a;
+    position: relative;
+    overflow: hidden;
+}
+.switch-formulario{
+    height: 60px;
+    width: 300px;
+    margin: 20px auto;
+    box-shadow: 10px 10px 30px #b5a98a;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.login,
+.signup{
+    font-size: 22px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.slider{
+    height: 60px;
+    width: 150px;
+    border-radius: 50px;
+    background-image: linear-gradient(to right,
+            #b5a98a,
+            #8c8471);
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    transition: all 0.5s ease-in-out;
+}
+.moveslider{
+    left: 250px;
+}
+.seccion-formulario{
+    height: 500px;
+    width: 1000px;
+    padding: 20px 0;
+    display: flex;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    left: 0px;
+}
+.form-section-move{
+    left: -500px;
+}
+.formulario-login,
+.formulario-registro{
+    height: 100%;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 40px;
+}
+.formulario-login{
+    gap: 50px;
+}
+.formulario-registro{
+    gap: 30px;
+}
+
+.ele{
+    height: 60px;
+    width: 400px;
+    outline: none;
+    border: none;
+    color: #faf9f7;
+    background-color: #8c8471;
+    border-radius: 50px;
+    padding-left: 30px;
+    font-size: 18px;
+}
+.clkbtn {
+    height: 60px;
+    width: 150px;
+    border-radius: 50px;
+    background-image: linear-gradient(to right,
+            #b5a98a,
+            #8c8471);
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+}
