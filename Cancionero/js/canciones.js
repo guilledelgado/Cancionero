@@ -1,70 +1,56 @@
-const canciones = [
-  {
-    id: "de-musica-ligera",
-    titulo: "De Musica Ligera",
-    artista: "Soda Stereo",
-    album: "Canción Animal",
-    anio: 1990,
-    tonalidad: "Bm",
-    portada: "../multimedia/logo-musica-ligera.jpg",
-    letraYAcordes: `
-Ella durmió
-Al calor de las masas
-Y yo desperté
-Queriendo soñarla
+document.addEventListener('DOMContentLoaded', () => {
+    const POR_PAGINA = 6;
+    const contenedorGrid = document.getElementById('grid-canciones');
+    const btnAnterior = document.getElementById('btn-anterior');
+    const btnSiguiente = document.getElementById('btn-siguiente');
+    const indicador = document.getElementById('indicador-pagina');
+    let paginaActual = 0;
 
-Algún tiempo atrás
-Pensé en escribirle
-Que nunca sorteé
-Las trampas del amor
+    async function cargarPagina(pagina) {
+        try {
+            const from = pagina * POR_PAGINA;
+            const res = await fetch(`/api/canciones?cantidad=${POR_PAGINA}&from=${from}`);
+            if (!res.ok) {
+                throw new Error(`El servidor respondió con el código ${res.status}`);
+            }
+            const { total, data } = await res.json();
 
-De aquel amor
-De música ligera
-Nada nos libra
-Nada más queda
+            contenedorGrid.innerHTML = '';
+            data.forEach(cancion => {
+                const tarjeta = document.createElement('a');
+                tarjeta.href = `/cancion.html?id=${cancion.id}`;
+                tarjeta.className = 'tarjeta-cancion';
 
-No le enviaré
-Cenizas de rosas
-Ni pienso evitar
-Un roce secreto
+                tarjeta.innerHTML = `
+                    <img src="${cancion.portada}" alt="Portada de ${cancion.titulo}">
+                    <div class="info-tarjeta">
+                        <h3>${cancion.titulo}</h3>
+                        <p>${cancion.artista}</p>
+                    </div>
+                `;
 
-De aquel amor
-De música ligera
-Nada nos libra
-Nada más queda
+                contenedorGrid.appendChild(tarjeta);
+            });
 
-De aquel amor
-De música ligera
-Nada nos libra
-Nada más queda
+            paginaActual = pagina;
+            const totalPaginas = Math.max(1, Math.ceil(total / POR_PAGINA));
+            indicador.textContent = `Página ${pagina + 1} de ${totalPaginas}`;
+            btnAnterior.disabled = pagina === 0;
+            btnSiguiente.disabled = from + POR_PAGINA >= total;
+        } catch (error) {
+            console.error('Error cargando el catálogo:', error);
+            contenedorGrid.innerHTML = '<p>Hubo un error al cargar las canciones.</p>';
+        }
+    }
 
-Nada más
+    btnAnterior.addEventListener('click', () => cargarPagina(paginaActual - 1));
+    btnSiguiente.addEventListener('click', () => cargarPagina(paginaActual + 1));
 
-Nada más queda
-Nada más queda
-Nada más queda
-Nada más queda
-`
-  }, {
-    id: "en-la-ciudad-de-la-furia",
-    titulo: "En la Ciudad de la Furia",
-    artista: "Soda Stereo",
-    album: "Cancion Animal",
-    anio: 1990,
-    tonalidad: "Em",
-    portada: "../multimedia/logo-En-la-Ciudad-De-la-Furia.jpg",
-    letraYAcordes: `
-Me verás volar
-Por la ciudad de la furia
-Donde nadie sabe de mí
-Y yo soy parte de todos
+    cargarPagina(0);
+});
 
-Nada cambiará
-Con un aviso de curva
-En sus caras veo el temor
-Ya no hay fábulas
-En la ciudad de la furia
 
+<<<<<<< HEAD
 Me verás caer
 Como un ave de presa
 Me verás caer
@@ -370,3 +356,5 @@ Al rebaño y su temor
 `
   }
 ];
+=======
+>>>>>>> 3ddfb025465baffb3ba6791f6aea7919b431e60f

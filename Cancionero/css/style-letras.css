@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Contenedor general */
 .letra-cancion {
     display: block;
@@ -34,4 +35,88 @@
     color: var(--color-detalles, #b5a98a);
     white-space: pre-wrap; /* Respeta los espacios en blanco que hayas dejado en tu base de datos */
     line-height: 1;
+=======
+.segmento {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: top;
+
+}
+
+.acorde {
+    color: var(--color-acorde);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    line-height: 1.3;
+    min-height: 1.3em;
+    padding-right: 0.5em; 
+}
+
+.letra {
+    line-height: 1.3;
+    min-height: 1.3em; 
+    white-space: pre;  
+}
+
+.letra-cancion {
+    color: var(--color-letra);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+.letra-transparente {
+    color: transparent;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+#tonalidad {
+    color: var(--color-detalles);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+.botonCambiarTonalidad {
+    display: flex;
+    gap: 12px; 
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+}
+
+
+.botonCambiarTonalidad button {
+    background-color: var(--color-boton-flotante);
+    border: 1px solid var(--color-borde-flotante);
+    color: var(--color-detalles);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 45px;
+    min-width: 45px; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 10px var(--color-sombra-suave);
+    transition: all 0.2s ease;
+    
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px;
+}
+
+
+.botonCambiarTonalidad button:hover {
+    background-color: var(--color-boton-flotante-hover);
+    border-color: var(--color-detalles);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px var(--color-sombra-fuerte);
+}
+
+
+.botonCambiarTonalidad button:active {
+    transform: translateY(0);
+>>>>>>> 3ddfb025465baffb3ba6791f6aea7919b431e60f
 }

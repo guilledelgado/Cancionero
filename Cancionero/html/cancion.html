@@ -5,9 +5,15 @@
 	<title id="title"></title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
 	<link rel="stylesheet" href="../css/style.css" />
 	<link rel="stylesheet" href="../css/style-letras.css" />
 	<script src="../js/vistas.js" defer></script>
+=======
+	<link rel="stylesheet" href="/css/style.css" />
+	<link rel="stylesheet" href="/css/style-letras.css" />
+	<script src="/js/vistas.js" defer></script>
+>>>>>>> 3ddfb025465baffb3ba6791f6aea7919b431e60f
 </head>
 
 <body class="pagina-cancion">
@@ -15,7 +21,6 @@
 
 	<main id="contenedor-cancion">
 		<section class="informacion-cancion">
-			<!-- Etiqueta lista para recibir la imagen -->
 			<img id="portada" src="" alt="Portada del disco" style="max-width: 250px; height: auto;">
 			<div>
 				<h2 id="titulo"></h2>
@@ -24,11 +29,15 @@
 				<h4 id="anio"></h4>
 				<h4>Tonalidad: <span id="tonalidad"></span></h4>
 			</div>
+			<section class="botonCambiarTonalidad">
+				<button id="disminuirTonalidad">-</button>
+				<button id="resetearTonalidad">Original</button>
+				<button id="aumentarTonalidad">+</button>
+			</section>
 		</section>
 		<section class="letra-cancion"></section>
 	</main>
-	<script src="../js/canciones.js"></script>
-	<script src="../js/ver-cancion.js"></script>
+	<script src="/js/ver-cancion.js"></script>
 	<footer></footer>
 </body>
 

@@ -1,18 +1,27 @@
 const express = require('express');
+const path = require('path');
+const cancionesRoutes = require('./rutas-canciones');
+const artistasRoutes = require('./rutas-artistas');
+const { notFoundApi, errorHandler } = require('./middlewares/errores');
+
 const app = express();
 const port = 3000;
-const path = require('path');
+const carpetaFront = path.join(__dirname, '../Cancionero');
 
-app.use(express.static(path.join(__dirname, '../Cancionero')));
+app.use(express.json());
+app.use(express.static(carpetaFront));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../Cancionero/html/home.html'));
+    res.sendFile(path.join(carpetaFront, 'html', 'home.html'));
 });
 
-app.get('/home.html', (req, res) => {
-    res.sendFile(path.join(__dirname, '../Cancionero/html/home.html'));
+['home', 'artistas', 'canciones', 'cancion', 'perfil-artista'].forEach(pagina => {
+    app.get(`/${pagina}.html`, (req, res) => {
+        res.sendFile(path.join(carpetaFront, 'html', `${pagina}.html`));
+    });
 });
 
+<<<<<<< HEAD
 app.get('/artistas.html', (req, res) => {
     res.sendFile(path.join(__dirname, '../Cancionero/html/artistas.html'));
 });
@@ -32,6 +41,12 @@ app.get('/soda/soda-stereo.html', (req, res) => {
 app.get('/airbag/airbag.html', (req, res) => {
     res.sendFile(path.join(__dirname, '../Cancionero/html/airbag/airbag.html'));
 });
+=======
+app.use('/api/canciones', cancionesRoutes);
+app.use('/api/artistas', artistasRoutes);
+app.use('/api', notFoundApi);
+app.use(errorHandler);
+>>>>>>> 3ddfb025465baffb3ba6791f6aea7919b431e60f
 
 app.listen(port, () => {
     console.log(`Servidor corriendo en http://localhost:${port}`);
