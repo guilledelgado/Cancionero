@@ -13,7 +13,8 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <script src="/js/vistas.js" defer></script>
-    <script src="/js/perfil-artista.js" defer></script>
+    <!-- <script src="/js/perfil-artista.js" defer></script> -->
+    <script src="/js/artistas.js" defer></script>
 </head>
 
 <body>
@@ -21,7 +22,15 @@
     <section class="contenedor-catalogo">
         <h2 style="text-align: center; margin-top: 20px;">Artistas</h2>
 
-        <ul class="grid-artistas">
+        <ul id="grid-artistas" class="grid-artistas"></ul>
+
+        <div class="paginacion">
+            <button id="btn-anterior">Anterior</button>
+            <span id="indicador-pagina"></span>
+            <button id="btn-siguiente">Siguiente</button>
+        </div>
+        
+        <!-- <ul class="grid-artistas">
             <li>
                 <a href="/perfil-artista.html?id=patricio-rey" class="tarjeta-artista">
                     <img src="/multimedia/logo-PR.png" alt="Patricio Rey">
@@ -42,7 +51,7 @@
                     <h3>Airbag</h3>
                 </a>
             </li>
-        </ul>
+        </ul> -->
     </section>
     <footer></footer>
 </body>
