@@ -4,33 +4,33 @@
 
 :root {
     /* Base y estructura */
-    --color-body: #09090b;
-    --color-superficie: #121214;
-    --color-texto: #fafafa;
-    --color-detalles: #e4e4e7;
+    --color-body: #fafafa;
+    --color-superficie: #f4f4f5;
+    --color-texto: #09090b;
+    --color-detalles: #27272a;
     --color-texto-secundario: #71717a;
-    --color-borde: #27272a;
+    --color-borde: #e4e4e7;
 
     /* Tarjetas y grillas */
-    --color-tarjeta: #141416;
-    --color-tarjeta-hover: #1f1f23;
-    --color-tarjeta-texto: #fafafa;
-    --color-tarjeta-subtexto: #a1a1aa;
-    --borde-tarjeta: #27272a;
-    --color-avatar-fondo: #09090b;
-    --color-avatar-borde: #f59e0b;
+    --color-tarjeta: #f4f4f5;
+    --color-tarjeta-hover: #e4e4e7;
+    --color-tarjeta-texto: #09090b;
+    --color-tarjeta-subtexto: #52525b;
+    --borde-tarjeta: #e4e4e7;
+    --color-avatar-fondo: #ffffff;
+    --color-avatar-borde: #d97706;
 
     /* Letra, acordes y controles de tonalidad */
-    --color-acorde: #fb923c;
-    --color-letra: #d4d4d8;
-    --color-boton-flotante: #18181b;
-    --color-boton-flotante-hover: #27272a;
-    --color-borde-flotante: #3f3f46;
+    --color-acorde: #ea580c;
+    --color-letra: #27272a;
+    --color-boton-flotante: #ffffff;
+    --color-boton-flotante-hover: #f4f4f5;
+    --color-borde-flotante: #d4d4d8;
 
     /* Capas translúcidas y sombras */
-    --color-overlay: rgba(0, 0, 0, 0.8);
-    --color-sombra-suave: rgba(0, 0, 0, 0.6);
-    --color-sombra-fuerte: rgba(0, 0, 0, 0.85);
+    --color-overlay: rgba(255, 255, 255, 0.82);
+    --color-sombra-suave: rgba(9, 9, 11, 0.08);
+    --color-sombra-fuerte: rgba(9, 9, 11, 0.16);
 }
 
 .inter-fuente-normal {
