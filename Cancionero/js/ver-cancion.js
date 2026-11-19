@@ -138,48 +138,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     elTitulo.textContent = cancion.titulo;
     document.getElementById('title').textContent = cancion.titulo;
     document.getElementById('artista').textContent = cancion.artista;
-<<<<<<< HEAD
-    document.getElementById('tonalidad').textContent = cancion.tonalidad;
-
-=======
     document.getElementById('album').textContent = cancion.album;
     document.getElementById('anio').textContent = cancion.anio;
->>>>>>> 3ddfb025465baffb3ba6791f6aea7919b431e60f
 
     const imgPortada = document.getElementById('portada');
     imgPortada.src = cancion.portada;
     imgPortada.alt = `Tapa del disco de ${cancion.titulo}`;
 
-<<<<<<< HEAD
-    const letra = cancion.letraYAcordes;
-    const lineas = letra.split("\n");
-    let htmlFinal = '';
-    lineas.forEach(linea => {
-      if(linea.trim()===''){
-        htmlFinal += '<br>';
-        return;
-      }
-
-      let lineaProcesada = linea;
-      if (!lineaProcesada.startsWith('[')) {
-        lineaProcesada = '[]' + lineaProcesada;
-      }
-      const letraFinal=letra.replace(/\[(.*?)\]([^\[]+)/g, (match, acorde, texto)=>{
-        return `<span class="segmento">
-                <span class="acorde">${acorde}</span>
-                <span class="letra">${texto}</span>
-            </span>`;
-      });
-      htmlFinal+=`<div class="renglon">${lineaHTML}</div>`;
-    });
-    
-    document.querySelector('.letra-cancion').innerHTML = htmlFinal;
-  
-  } else {
-  // Manejo de error si no existe la canción...
-}
-})
-=======
     aplicarEfectoTapa(imgPortada);
 
     function aplicarEfectoTapa(elemento) {
@@ -244,4 +209,3 @@ document.addEventListener('DOMContentLoaded', async () => {
     elTitulo.textContent = 'Error al cargar la canción';
   }
 });
->>>>>>> 3ddfb025465baffb3ba6791f6aea7919b431e60f
